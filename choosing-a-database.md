@@ -18,7 +18,7 @@ Is is a few simple entities with basic connections, or a complex web of intercon
 
 ### How is the data accessed
 
-How data will be queried? Is there complicated read logic over a variety of entities? Are we going to join together and aggregate data from multiple tables or documents?
+How will data be queried? Is there complicated read logic over a variety of entities? Are we going to join together and aggregate data from multiple tables or documents?
 
 What's the traffic profile of the application? Is there a single user or or lots of multiple concurrent users? Are concurrent users accessing the _same_ data or only separate data? Is the _load_ on the database consistent or does it fluctuate, and if so, how predictably?
 
