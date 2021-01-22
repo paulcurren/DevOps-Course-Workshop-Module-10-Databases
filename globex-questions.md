@@ -44,8 +44,8 @@ Note: You should have already followed the [set-up instructions](https://github.
 2.  How many units of the product from the previous question were sold on the credit card with number `3535880159004410`?
     <details><summary>Answer</summary>7098.00</details>
 
-3.  We've noticed an error in an upstream system. When updating an employee's manager the the employees table hasn't been correctly updated. The `ManagerId` has been updated, but the `ManagerFirstName` and `ManagerSurname` have not. How many records does this impact?
-    <details><summary>Answer</summary>3</details>
+3.  We've noticed an error in an upstream system. When updating an employee's manager the employees table hasn't been correctly updated. The `ManagerId` has been updated, but the `ManagerFirstName` and `ManagerSurname` have not. How many records does this impact?
+    <details><summary>Answer</summary>4</details>
 
 ## Aggregation
 
@@ -70,15 +70,88 @@ The value of an order can be calculated by multiplying the `Amount` of product o
     <details><summary>Answer</summary>84689146.20</details>
 
 6.  (Optional) The finance director needs a month-by-month report of order values for 2020. Please write a query to produce a order values grouped by month name.
-    <details><summary>Answer</summary>QQ - It's a table</details>
+    <details>
+    <summary>Answer</summary>
+
+    | Month    | Value       |
+    | -------- | ----------- |
+    |January   | 10021197.33 |
+    |February  | 5451368.04  |
+    |March     | 8393388.67  |
+    |April     | 6455989.74  |
+    |May       | 10138281.22 |
+    |June      | 8845170.26  |
+    |July      | 7174546.57  |
+    |August    | 7310235.65  |
+    |September | 8305703.18  |
+    |October   | 8597017.86  |
+    |November  | 8244004.19  |
+    |December  | 6152906.05  |
+    </details>
     <details><summary>Hint</summary>You'll need the `GROUPBY` function.</details>
 
 7.  (Optional) Please adapt the above report so it prints the month names in Spanish.
-    <details><summary>Answer</summary>QQ - It's a table</details>
+    <details><summary>Answer</summary>
+
+    | Month      | Value       |
+    | ---------- | ----------- |
+    | enero      | 10021197.33 |
+    | febrero    | 5451368.04  |
+    | marzo      | 8393388.67  |
+    | abril      | 6455989.74  |
+    | mayo       | 10138281.22 |
+    | junio      | 8845170.26  |
+    | julio      | 7174546.57  |
+    | agosto     | 7310235.65  |
+    | septiembre | 8305703.18  |
+    | octubre    | 8597017.86  |
+    | noviembre  | 8244004.19  |
+    | diciembre  | 6152906.05  |
+    </details>
     <details><summary>Hint</summary>The `FORMAT` function can take a 'culture' parameter.</details>
 
 8.  (Optional) The report now needs to include every year - grouped and ordered by year _and_ month.
-    <details><summary>Answer</summary>QQ - It's a table</details>
+    <details><summary>Answer</summary>
+
+    | Year | Month     | Value         |
+    |------|-----------|---------------|
+    | 2018 | January   | 5656943.14  |
+    | 2018 | February  | 10756477.55 |
+    | 2018 | March     | 5156643.61  |
+    | 2018 | April     | 8158733.57  |
+    | 2018 | May       | 6909454.38  |
+    | 2018 | June      | 8618200.66  |
+    | 2018 | July      | 4973409.32  |
+    | 2018 | August    | 7338968.02  |
+    | 2018 | September | 9850131.20  |
+    | 2018 | October   | 7754044.63  |
+    | 2018 | November  | 7204268.44  |
+    | 2018 | December  | 9031586.17  |
+    | 2019 | January   | 7140463.17  |
+    | 2019 | February  | 6127454.68  |
+    | 2019 | March     | 8720289.82  |
+    | 2019 | April     | 8776308.77  |
+    | 2019 | May       | 8059621.26  |
+    | 2019 | June      | 8271865.02  |
+    | 2019 | July      | 7485176.76  |
+    | 2019 | August    | 8554835.59  |
+    | 2019 | September | 5162879.62  |
+    | 2019 | October   | 8480658.03  |
+    | 2019 | November  | 5960023.00  |
+    | 2019 | December  | 9030807.45  |
+    | 2020 | January   | 10021197.33 |
+    | 2020 | February  | 5451368.04  |
+    | 2020 | March     | 8393388.67  |
+    | 2020 | April     | 6455989.74  |
+    | 2020 | May       | 10138281.22 |
+    | 2020 | June      | 8845170.26  |
+    | 2020 | July      | 7174546.57  |
+    | 2020 | August    | 7310235.65  |
+    | 2020 | September | 8305703.18  |
+    | 2020 | October   | 8597017.86  |
+    | 2020 | November  | 8244004.19  |
+    | 2020 | December  | 6152906.05  |
+    </details>
     <details><summary>Hint</summary>You can pass multiple values to `ORDER BY` and `GROUP BY` commands.</details>
 
 ## Optional Extras
