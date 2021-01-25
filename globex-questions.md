@@ -1,6 +1,6 @@
 # Globex Data Task
 
-Globex is an export company that supplies widgets to consumers around the world. Their **DBA** (database administer) recently left without warning and they need some help. There are a series of questions below that need answering.
+Globex is an export company that supplies widgets to consumers around the world. Their **DBA** (database administrator) recently left without warning and they need some help. There are a series of questions below that need answering.
 
 If you're unfamiliar with SQL the questions loosely follow the structure of the Module 9 additional reading.
 
