@@ -88,7 +88,7 @@ The value of an order can be calculated by multiplying the `Amount` of product o
     |November  | 8244004.19  |
     |December  | 6152906.05  |
     </details>
-    <details><summary>Hint</summary>You'll need the `GROUPBY` function.</details>
+    <details><summary>Hint</summary>You'll need the `GROUP BY` statement.</details>
 
 7.  (Optional) Please adapt the above report so it prints the month names in Spanish.
     <details><summary>Answer</summary>
