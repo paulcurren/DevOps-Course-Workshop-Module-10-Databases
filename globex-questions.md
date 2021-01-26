@@ -69,7 +69,7 @@ The value of an order can be calculated by multiplying the `Amount` of product o
 5.  What was the value of all orders placed in 2019 excluding the following: 'Voltaren','Loud Child', 'topiramate', 'Omeprazole'?
     <details><summary>Answer</summary>84689146.20</details>
 
-6.  (Optional) The finance director needs a month-by-month report of order values for 2020. Please write a query to produce a order values grouped by month name.
+6.  (Optional) The finance director needs a month-by-month report of order values for 2020. Please write a query to produce total order values grouped by month name.
     <details>
     <summary>Answer</summary>
 
