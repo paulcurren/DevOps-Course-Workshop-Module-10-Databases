@@ -34,7 +34,7 @@ Work through your issues in priority order and come up with a plan to fix them.
 
 The database we've been using so far has contained a lot of live, sensitive data. For local development and testing we want a database that is close to live but without any sensitive data.
 
-Write a script that _obfuscates_ all the sensitive data that should not appear in the test environment.
+Write a script that redacts all the sensitive data that should not appear in the test environment.
 
 ### 2.4: (Optional) Improve the database
 
