@@ -38,7 +38,7 @@ Note: You should have already followed the [set-up instructions](https://github.
 
 ## Joins
 
-For these questions, note that "orders" track the purchases of products that Globex has made, whilst "sales" track the sale of the same products.
+For these questions, note that "orders" tracks Globex buying stock in, whilst "sales" track the sale of the same products to clients.
 
 1.  What is the name of the product that was requested in the order with ID 149?
     <details><summary>Answer</summary>Flector</details>
