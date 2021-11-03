@@ -38,11 +38,14 @@ Note: You should have already followed the [set-up instructions](https://github.
 
 ## Joins
 
+For these questions, note that "orders" tracks Globex buying stock in, whilst "sales" track the sale of the same products to clients.
+
 1.  What is the name of the product that was requested in the order with ID 149?
     <details><summary>Answer</summary>Flector</details>
 
 2.  How many units of the product from the previous question were sold on the credit card with number `3535880159004410`?
     <details><summary>Answer</summary>7098.00</details>
+    <details><summary>Hint</summary>Doesn't look like the card number is on the sale; can you find it elsewhere? Does this placement make sense?</details>
 
 3.  We've noticed an error in an upstream system. When updating an employee's manager the employees table hasn't been correctly updated. The `ManagerId` has been updated, but the `ManagerFirstName` and `ManagerSurname` have not. How many records does this impact?
     <details><summary>Answer</summary>4</details>
