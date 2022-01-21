@@ -31,6 +31,7 @@ Connect to the database with the following details:
 Server name: `localhost`  
 Port Number: 1433  
 _Note, in SSMS or the SQL Server extension for VSCode, provide the server name and port together using this syntax: `localhost,1433`_  
+Database name: `globex`  
 Authentication: `SQL Server Authentication`  
 Login: `sa`  
 Password: `Password123!`  
