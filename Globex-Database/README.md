@@ -22,10 +22,10 @@ Check that the container is running with `docker ps`, you should see something l
 
 ```text
 CONTAINER ID   IMAGE       COMMAND                  CREATED         STATUS                   PORTS                    NAMES
-<SOME_ID>      module-09   "powershell -Command…"   3 minutes ago   Up 3 minutes (healthy)   0.0.0.0:1433->1433/tcp   module-09-container
+<SOME_ID>      module-10   "powershell -Command…"   3 minutes ago   Up 3 minutes (healthy)   0.0.0.0:1433->1433/tcp   module-10-container
 ```
 
-If it isn't, run `docker start module-09-container` to start it. If you stop the container for any reason (e.g. restarting your machine) you'll need to run this command.
+If it isn't, run `docker start module-10-container` to start it. If you stop the container for any reason (e.g. restarting your machine) you'll need to run this command.
 
 Connect to the database with the following details:  
 Server name: `localhost`  
