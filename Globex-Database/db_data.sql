@@ -18,7 +18,8 @@ BULK INSERT [Supplier]
 FROM '/data/Supplier.csv'
 WITH (
     FIRSTROW=2,
-    FORMAT = 'CSV'
+    FORMAT = 'CSV',
+    ROWTERMINATOR='0x0a'
 )
 GO
 
@@ -26,7 +27,8 @@ BULK INSERT [Product]
 FROM '/data/Product.csv'
 WITH (
     FIRSTROW=2,
-    FORMAT = 'CSV'
+    FORMAT = 'CSV',
+    ROWTERMINATOR='0x0a'
 )
 GO
 
@@ -34,7 +36,8 @@ BULK INSERT [Stock]
 FROM '/data/Stock.csv'
 WITH (
     FIRSTROW=2,
-    FORMAT = 'CSV'
+    FORMAT = 'CSV',
+    ROWTERMINATOR='0x0a'
 )
 GO
 
@@ -42,7 +45,8 @@ BULK INSERT [Order]
 FROM '/data/Order.csv'
 WITH (
     FIRSTROW=2,
-    FORMAT = 'CSV'
+    FORMAT = 'CSV',
+    ROWTERMINATOR='0x0a'
 )
 GO
 
@@ -50,7 +54,8 @@ BULK INSERT [Sale]
 FROM '/data/Sale.csv'
 WITH (
     FIRSTROW=2,
-    FORMAT = 'CSV'
+    FORMAT = 'CSV',
+    ROWTERMINATOR='0x0a'
 )
 GO
 
@@ -58,7 +63,8 @@ BULK INSERT [User]
 FROM '/data/User.csv'
 WITH (
     FIRSTROW=2,
-    FORMAT = 'CSV'
+    FORMAT = 'CSV',
+    ROWTERMINATOR='0x0a'
 )
 GO
 
@@ -66,6 +72,7 @@ BULK INSERT [Employee]
 FROM '/data/Employee.csv'
 WITH (
     FIRSTROW=2,
-    FORMAT = 'CSV'
+    FORMAT = 'CSV',
+    ROWTERMINATOR='0x0a'
 )
 GO
