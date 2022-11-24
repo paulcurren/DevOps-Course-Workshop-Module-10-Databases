@@ -6,7 +6,7 @@ docker run -d -p 1433:1433 -e "SA_PASSWORD=Password123!" -e "ACCEPT_EULA=Y" --na
 docker exec -it module-10-container ./wait-for-it.sh localhost:1433 --timeout=30
 docker exec -it module-10-container sleep 5s
 
-docker exec -it module-10-container /opt/mssql-tools/bin/sqlcmd -S localhost,1433 -U sa -P Password123! -i ./db_schema.sql
+docker exec -it module-10-container /opt/mssql-tools/bin/sqlcmd -U sa -P Password123! -i ./db_schema.sql
 
-docker exec -it module-10-container /opt/mssql-tools/bin/sqlcmd -S localhost,1433 -U sa -P Password123! -i ./db_data.sql
+docker exec -it module-10-container /opt/mssql-tools/bin/sqlcmd -U sa -P Password123! -i ./db_data.sql
     

@@ -36,6 +36,8 @@ Note: You should have already followed the [set-up instructions](https://github.
 8. How many employees at PayBand 3 or below are **not** Union members?
 <details><summary>Answer</summary>60</details>
 
+`select count(1) from Employee where PayBand<=3 and UnionMembershipNo is null`
+
 ## Joins
 
 For these questions, note that "orders" tracks Globex buying stock in, whilst "sales" track the sale of the same products to clients.
@@ -43,9 +45,21 @@ For these questions, note that "orders" tracks Globex buying stock in, whilst "s
 1.  What is the name of the product that was requested in the order with ID 149?
     <details><summary>Answer</summary>Flector</details>
 
+`select p.Name
+from product p
+join [order] o on o.Product = p.Id
+where o.Id=149`
+
 2.  How many units of the product from the previous question were sold on the credit card with number `3535880159004410`?
     <details><summary>Answer</summary>7098.00</details>
     <details><summary>Hint</summary>Doesn't look like the card number is on the sale; can you find it elsewhere? Does this placement make sense?</details>
+
+`select sum(amount)
+from product p
+join sale s on s.ProductId = p.Id
+join [user] u on s.username = u.username
+where p.Name = 'flector'
+and u.CardNumber='3535880159004410'`
 
 3.  We've noticed an error in an upstream system. When updating an employee's manager the employees table hasn't been correctly updated. The `ManagerId` has been updated, but the `ManagerFirstName` and `ManagerSurname` have not. How many records does this impact?
     <details><summary>Answer</summary>4</details>
@@ -59,8 +73,20 @@ The value of an order can be calculated by multiplying the `Amount` of product o
 1.  What was the value of order 115?
     <details><summary>Answer</summary>470866.56</details>
 
+    `select sum(p.sellingprice * o.Amount) 
+from product p
+join [order] o on o.Product = p.Id
+where o.Id=115`
+
 2.  What is the value of the highest value order in the system?
     <details><summary>Answer</summary>960151.08</details>
+
+`select sum(p.sellingprice * o.Amount) as v, o.Id
+from product p
+join [order] o on o.Product = p.Id
+group by o.Id
+order by v desc`
+
 
 3.  What was the value of the most expensive order placed in 2019?
     <details><summary>Answer</summary>903860.40</details>
@@ -69,8 +95,19 @@ The value of an order can be calculated by multiplying the `Amount` of product o
 4.  What was the value of all orders placed in 2019?
     <details><summary>Answer</summary>91770383.17</details>
 
+`select sum(p.sellingprice * o.Amount) as v
+from product p
+join [order] o on o.Product = p.Id
+where o.date between '2019-1-1' and '2020-1-1'`
+
 5.  What was the value of all orders placed in 2019 excluding the following: 'Voltaren','Loud Child', 'topiramate', 'Omeprazole'?
     <details><summary>Answer</summary>84689146.20</details>
+
+`select sum(p.sellingprice * o.Amount) as v
+from product p
+join [order] o on o.Product = p.Id
+where o.date between '2019-1-1' and '2020-1-1'
+and p.Name not in ('Voltaren','Loud Child', 'topiramate', 'Omeprazole')`
 
 6.  (Optional) The finance director needs a month-by-month report of order values for 2020. Please write a query to produce total order values grouped by month name.
     <details>
